@@ -1,0 +1,37 @@
+{
+  "name": "contract-deploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "truffle compile --all",
+    "deploy": "truffle migrate -f 1 --to 1 --network beam_testnet",
+    "update": "truffle migrate -f 2 --to 2 --network beam_testnet --verbose",
+    "verify:ammo": "truffle run verify AmmoToken --network beam_testnet",
+    "verify:dispenser": "truffle run verify TokenDispenser --network beam_testnet"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0",
+    "@openzeppelin/contracts-upgradeable": "^4.7.3",
+    "@openzeppelin/network": "^0.4.3",
+    "@truffle/hdwallet-provider": "^2.0.9",
+    "dotenv": "^16.0.1",
+    "solc": "^0.8.17",
+    "truffle-contract-size": "^2.0.1",
+    "truffle-plugin-verify": "^0.5.26"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts-ethereum-package": "^3.0.0",
+    "@openzeppelin/gsn-helpers": "^0.2.4",
+    "@openzeppelin/truffle-upgrades": "^1.16.0",
+    "@openzeppelin/upgrades": "^2.8.0",
+    "ethereumjs-tx": "^2.1.2",
+    "web3": "^1.8.0"
+  }
+}
